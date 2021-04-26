@@ -4,15 +4,15 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>pete beegle</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>pete beegle</h1>
-        <div>
+        <h1 className="text-gray-900 dark:text-white">pete beegle</h1>
+        <div className="text-gray-600 dark:text-gray-300">
           <Link href="https://github.com/petebeegle">
             <a>github</a>
           </Link>{' '}
