@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-export default function useDarkMode() {
+export default function useDarkMode(): [string, Dispatch<SetStateAction<String>>] {
   const [theme, setTheme] = useState('light');
   const colorTheme = theme === 'light' ? 'dark' : 'light';
   useEffect(
@@ -9,8 +9,7 @@ export default function useDarkMode() {
       root.classList.remove(colorTheme);
       root.classList.add(theme);
     },
-    [theme],
-    colorTheme
+    [theme]
   );
   return [colorTheme, setTheme];
 }
