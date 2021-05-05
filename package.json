@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "deploy": "serverless"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint:fix"
@@ -15,7 +16,8 @@
   "dependencies": {
     "next": "10.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "serverless": "^2.39.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
