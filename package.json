@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix",
-    "deploy": "serverless"
+    "lint:fix": "npm run lint -- --fix"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint:fix"
