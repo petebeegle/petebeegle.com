@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { DarkModeToggle } from '../components/darkModeToggle';
-import { ExternalLink } from '../components/externalLink';
+import DarkModeToggle from '@element/DarkModeToggle/DarkModeToggle';
+import ExternalLink from '@element/ExternalLink/ExternalLink';
 
 export default function Home() {
   return (
