@@ -1,3 +1,5 @@
+import ExternalLink from '@element/ExternalLink/ExternalLink';
+
 const Footer = (): JSX.Element => (
   <footer className="p-5 bg-gray-300 dark:bg-gray-900 text-gray-600 dark:text-gray-300 text-xs">
     <div className="flex flex-1 justify-between">
@@ -18,6 +20,14 @@ const Footer = (): JSX.Element => (
           />
         </svg>
       </span>
+
+      {process.env.NEXT_PUBLIC_COMMIT_ID && (
+        <ExternalLink
+          href={`https://github.com/petebeegle/petebeegle.com/commit/${process.env.NEXT_PUBLIC_COMMIT_ID}`}
+          className="flex px-1"
+          name={process.env.NEXT_PUBLIC_COMMIT_ID}
+        />
+      )}
     </div>
   </footer>
 );
