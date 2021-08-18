@@ -1,10 +1,15 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const ExternalLink = ({ href, name, className }) => (
+type Props = {
+  href: string;
+  name: string;
+  className: string;
+};
+
+const ExternalLink = ({ href, name, className }: Props): JSX.Element => (
   <span className={className}>
     <Link href={href}>
-      <a className="flex justify-center items-center px-3 hover:underline">
+      <a className="flex justify-center items-center px-3 hover:underline text-gray-600 dark:text-gray-300">
         <span className="tracking-wide">{name}</span>
         <span className="px-1">
           <svg
@@ -26,3 +31,5 @@ export const ExternalLink = ({ href, name, className }) => (
     </Link>
   </span>
 );
+
+export default ExternalLink;

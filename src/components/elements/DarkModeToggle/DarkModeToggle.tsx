@@ -1,19 +1,6 @@
-import useDarkMode from '../hooks/useDarkMode';
+import useDarkMode from '@hook/useDarkMode';
 
-export const DarkModeToggle = () => {
-  const [colorTheme, setTheme] = useDarkMode();
-
-  return (
-    <button
-      className="w-10 h-10 block shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white"
-      onClick={() => setTheme(colorTheme)}
-    >
-      {colorTheme === 'light' ? <SunIcon /> : <MoonIcon />}
-    </button>
-  );
-};
-
-const MoonIcon = () => (
+const MoonIcon = (): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
@@ -30,7 +17,7 @@ const MoonIcon = () => (
   </svg>
 );
 
-const SunIcon = () => (
+const SunIcon = (): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
@@ -46,3 +33,18 @@ const SunIcon = () => (
     />
   </svg>
 );
+
+const DarkModeToggle = (): JSX.Element => {
+  const [colorTheme, setTheme] = useDarkMode();
+
+  return (
+    <button
+      className="w-10 h-10 block shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white"
+      onClick={() => setTheme(colorTheme)}
+    >
+      {colorTheme === 'light' ? <SunIcon /> : <MoonIcon />}
+    </button>
+  );
+};
+
+export default DarkModeToggle;

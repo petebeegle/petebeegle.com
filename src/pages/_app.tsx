@@ -1,11 +1,16 @@
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <div className="bg-white dark:bg-gray-800 h-screen">
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <>
+    <Head>
+      <title>pete beegle</title>
+    </Head>
+    <div className="bg-white dark:bg-gray-800">
       <Component {...pageProps} />
     </div>
-  );
-}
+  </>
+);
 
 export default MyApp;
