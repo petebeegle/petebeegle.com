@@ -1,4 +1,5 @@
-import useDarkMode from '@hook/useDarkMode';
+import { useComponentDidMount } from '@hook/useComponentDidMount';
+import { useDarkMode } from '@hook/useDarkMode';
 
 const MoonIcon = (): JSX.Element => (
   <svg
@@ -35,15 +36,20 @@ const SunIcon = (): JSX.Element => (
 );
 
 const DarkModeToggle = (): JSX.Element => {
-  const [colorTheme, setTheme] = useDarkMode();
+  const [isDark, setIsDark] = useDarkMode();
+  const loaded = useComponentDidMount();
+  const toggleSize = 'w-10 h-10';
 
-  return (
+  return loaded ? (
     <button
-      className="w-10 h-10 block shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white"
-      onClick={() => setTheme(colorTheme)}
+      className={`${toggleSize} block shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white`}
+      onClick={() => setIsDark(!isDark)}
+      title={`toggle ${isDark ? 'dark' : 'light'} mode`}
     >
-      {colorTheme === 'light' ? <SunIcon /> : <MoonIcon />}
+      {isDark ? <MoonIcon /> : <SunIcon />}
     </button>
+  ) : (
+    <div className={toggleSize} />
   );
 };
 

@@ -1,7 +1,7 @@
 import ExternalLink from '@element/ExternalLink/ExternalLink';
 
 const Footer = (): JSX.Element => (
-  <footer className="p-5 bg-gray-300 dark:bg-gray-900 text-gray-600 dark:text-gray-300 text-xs">
+  <footer className="p-5 text-gray-600 dark:text-gray-300 text-xs">
     <div className="flex flex-1 justify-between">
       <span className="flex dark:text-white tracking-wide leading-loose">
         <p>made with</p>
