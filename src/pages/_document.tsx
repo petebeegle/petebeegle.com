@@ -1,3 +1,4 @@
+import Analytics from '@module/Analytics/Analytics';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class CustomDocument extends Document {
@@ -6,6 +7,7 @@ class CustomDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <Analytics />
         </Head>
         <body>
           <Main />
