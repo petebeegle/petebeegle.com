@@ -11,7 +11,7 @@ class CustomDocument extends Document {
           <Analytics />
           <InitializeDarkMode />
         </Head>
-        <body>
+        <body className="bg-white dark:bg-gray-800">
           <Main />
           <NextScript />
         </body>
