@@ -1,12 +1,11 @@
+import { SEO } from 'config';
+import { DefaultSeo } from 'next-seo';
 import { AppProps, NextWebVitalsMetric } from 'next/app';
-import Head from 'next/head';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
-    <Head>
-      <title>pete beegle</title>
-    </Head>
+    <DefaultSeo {...SEO} />
     <Component {...pageProps} />
   </>
 );
