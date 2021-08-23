@@ -7,7 +7,6 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
           <Analytics />
           <InitializeDarkMode />
         </Head>
