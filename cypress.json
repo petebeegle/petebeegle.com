@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "projectId": "r8vqiy",
+  "pluginsFile": false,
+  "integrationFolder": "cypress/tests",
+  "screenshotOnRunFailure": false
+}
