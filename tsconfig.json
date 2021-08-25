@@ -20,6 +20,7 @@
       "@element/*": ["components/elements/*"],
       "@hook/*": ["hooks/*"]
     },
+    "sourceMap": true,
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
