@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, useState } from 'react';
 
 /**
  * A hook to modify values from the localStorage object.
@@ -10,7 +10,7 @@ import { Dispatch, SetStateAction, useState } from 'react';
 export const useLocalStorage = <T>(
   key: string,
   initialValue: T
-): [T, Dispatch<SetStateAction<T>>] => {
+): [T, Dispatch<T>] => {
   const [valueProxy, setValueProxy] = useState(() => {
     try {
       const item = window.localStorage.getItem(key);
