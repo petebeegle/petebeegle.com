@@ -1,13 +1,13 @@
 import { useLocalStorage } from '@hook/useLocalStorage';
 import { usePrefersDarkMode } from '@hook/usePrefersDarkMode';
-import { Dispatch, SetStateAction, useEffect } from 'react';
+import { Dispatch, useEffect } from 'react';
 
 /**
  * A hook to toggle dark mode.
  *
  * @returns A tuple with dark mode enabled and a setter to toggle the value.
  */
-export const useDarkMode = (): [boolean, Dispatch<SetStateAction<boolean>>] => {
+export const useDarkMode = (): [boolean, Dispatch<boolean>] => {
   const prefersDarkMode = usePrefersDarkMode();
 
   const [enabled, setEnabled] = useLocalStorage<boolean>(
