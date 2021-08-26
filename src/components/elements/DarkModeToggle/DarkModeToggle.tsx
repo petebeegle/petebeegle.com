@@ -42,7 +42,8 @@ const DarkModeToggle = (): JSX.Element => {
 
   return loaded ? (
     <button
-      className={`${toggleSize} block shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white`}
+      id="toggleDarkMode"
+      className={`${toggleSize} shadow-lg rounded-full curser-pointer flex items-center justify-center dark:text-white`}
       onClick={() => setIsDark(!isDark)}
       title={`toggle ${isDark ? 'dark' : 'light'} mode`}
     >
