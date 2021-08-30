@@ -3,11 +3,11 @@ import Link from 'next/link';
 type Props = {
   href: string;
   name: string;
-  className: string;
+  className?: string;
 };
 
 const ExternalLink = ({ href, name, className }: Props): JSX.Element => (
-  <span className={className}>
+  <span className={className ? className : 'px-1'}>
     <Link href={href}>
       <a className="flex justify-center items-center px-3 hover:underline text-gray-600 dark:text-gray-300">
         <span className="tracking-wide">{name}</span>
