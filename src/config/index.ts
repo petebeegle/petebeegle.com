@@ -2,6 +2,7 @@ import { DefaultSeoProps } from 'next-seo';
 
 export const SEO: DefaultSeoProps = {
   defaultTitle: 'pete beegle',
+  titleTemplate: 'pete beegle | %s',
   description: 'i am a software developer',
   additionalLinkTags: [
     {
