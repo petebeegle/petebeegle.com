@@ -1,5 +1,5 @@
 petebeegle.com:
-  component: "@sls-next/serverless-component@1.17.0"
+  component: '@sls-next/serverless-component@3.2.0'
   inputs:
     bucketName: petebeegle-com
-    domain: "petebeegle.com"
+    domain: 'petebeegle.com'
