@@ -8,14 +8,15 @@ const NotFound = (): JSX.Element => (
   <DefaultLayout>
     <NextSeo {...SEO} noindex={true} nofollow={true} title="not found" />
     <div className="flex items-center justify-center flex-1 flex-col">
-      <Image
-        className="flex-1"
-        src="/404.gif"
-        layout="fixed"
-        width={426}
-        height={212}
-        alt="Not Found"
-      />
+      <div className="w-96 h-64 relative">
+        <Image
+          className="flex-1"
+          src="/404.gif"
+          layout="fill"
+          alt="Not Found"
+        />
+      </div>
+
       <div className="flex items-center justify-center flex-col">
         <p className="mb-24 mt-8 text-2xl font-medium text-center">
           I think we should be leaving now.
