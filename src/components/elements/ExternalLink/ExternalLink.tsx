@@ -9,7 +9,7 @@ type Props = {
 const ExternalLink = ({ href, name, className }: Props): JSX.Element => (
   <span className={className ? className : 'px-1'}>
     <Link href={href}>
-      <a className="flex justify-center items-center px-3 hover:underline text-gray-600 dark:text-gray-300">
+      <a className="flex justify-center items-center px-3 hover:underline text-secondary">
         <span className="tracking-wide">{name}</span>
         <span className="px-1">
           <svg

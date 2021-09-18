@@ -16,6 +16,18 @@ module.exports = {
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    backgroundColor: (theme) => ({
+      primary: 'var(--color-back-primary)',
+    }),
+    textColor: (theme) => ({
+      primary: 'var(--color-fore-primary)',
+      secondary: 'var(--color-fore-secondary)',
+      accent: 'var(--color-fore-accent)',
+    }),
+    gradientColorStops: () => ({
+      primary: 'var(--color-gradient-accent1)',
+      secondary: 'var(--color-gradient-accent2)',
+    }),
     fontFamily: {
       sans: ['Inter', ...fontFamily.sans],
       mono: fontFamily.mono,

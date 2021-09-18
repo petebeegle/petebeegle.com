@@ -1,15 +1,15 @@
 import ExternalLink from '@element/ExternalLink/ExternalLink';
 
 const Footer = (): JSX.Element => (
-  <footer className="p-5 text-gray-600 dark:text-gray-300 text-xs">
+  <footer className="p-5 text-secondary text-xs">
     <div className="flex flex-1 justify-between">
-      <span className="flex dark:text-white tracking-wide leading-loose">
+      <span className="flex tracking-wide leading-loose">
         <p>made with</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
           viewBox="0 0 20 20"
-          fill="#de3618"
+          fill="#EF4444"
           aria-labelledby="heartTitle"
         >
           <title id="heartTitle">love</title>

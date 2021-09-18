@@ -24,7 +24,7 @@ const NotFound = (): JSX.Element => (
         <Link href="/" passHref>
           <a
             id="home"
-            className="btn bg-gradient-to-r from-indigo-700 to-blue-500 bg-200 bg-left hover:bg-right transition-all duration-[0.5s] ease-out leading-loose tracking-wide px-16"
+            className="btn bg-gradient-to-r from-primary to-secondary bg-200 bg-left hover:bg-right transition-all duration-[0.5s] ease-out leading-loose tracking-wide px-16 text-accent"
           >
             Take me home
           </a>
