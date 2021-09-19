@@ -8,10 +8,19 @@ const HomePage = (): JSX.Element => (
         pete beegle
       </h1>
       <div className="flex items-center justify-center">
-        <ExternalLink href="https://github.com/petebeegle" name="github" />
-        <ExternalLink href="https://gitlab.com/petebeegle" name="gitlab" />
+        <ExternalLink
+          href="https://github.com/petebeegle"
+          className="px-3"
+          name="github"
+        />
+        <ExternalLink
+          href="https://gitlab.com/petebeegle"
+          className="px-3"
+          name="gitlab"
+        />
         <ExternalLink
           href="https://www.linkedin.com/in/pete-beegle/"
+          className="px-3"
           name="linkedin"
         />
       </div>
