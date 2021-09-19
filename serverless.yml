@@ -3,3 +3,6 @@ petebeegle.com:
   inputs:
     bucketName: petebeegle-com
     domain: 'petebeegle.com'
+    publicDirectoryCache:
+      value: public, max-age=31536000, must-revalidate
+      test: /\.(gif|jpe?g|jp2|tiff|png|webp|bmp|svg|ico|woff2)$/i
