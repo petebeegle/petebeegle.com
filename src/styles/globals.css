@@ -1,4 +1,36 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/Inter.var.woff2);
+}
+
+.light {
+  --color-fore-primary: rgba(17, 24, 39, 1);
+  --color-fore-secondary: rgba(75, 85, 99, 1);
+  --color-fore-accent: rgba(249, 250, 251, 1);
+
+  --color-back-primary: rgba(249, 250, 251, 1);
+
+  --color-gradient-accent1: hsla(245, 58%, 51%, 1);
+  --color-gradient-accent2: hsla(217, 91%, 60%, 1);
+}
+
+.dark {
+  --color-fore-primary: rgba(249, 250, 251, 1);
+  --color-fore-secondary: rgba(209, 213, 219, 1);
+  --color-fore-accent: rgba(249, 250, 251, 1);
+
+  --color-back-primary: rgba(31, 41, 55, 1);
+
+  --color-gradient-accent1: hsla(245, 58%, 51%, 1);
+  --color-gradient-accent2: hsla(217, 91%, 60%, 1);
+}
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   h1 {
@@ -14,7 +46,7 @@
   }
 
   a {
-    @apply text-gray-600 dark:text-gray-300;
+    @apply text-secondary;
   }
 
   html {
@@ -23,13 +55,10 @@
   }
 
   body {
-    @apply overflow-x-hidden antialiased bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
+    @apply overflow-x-hidden antialiased bg-primary text-primary;
   }
 
   .btn {
-    @apply font-bold py-2 px-4 rounded dark:text-white text-white;
+    @apply font-bold py-2 px-4 rounded;
   }
 }
-
-@tailwind components;
-@tailwind utilities;

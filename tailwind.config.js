@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
@@ -15,19 +16,21 @@ module.exports = {
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    backgroundColor: (theme) => ({
+      primary: 'var(--color-back-primary)',
+    }),
+    textColor: (theme) => ({
+      primary: 'var(--color-fore-primary)',
+      secondary: 'var(--color-fore-secondary)',
+      accent: 'var(--color-fore-accent)',
+    }),
+    gradientColorStops: () => ({
+      primary: 'var(--color-gradient-accent1)',
+      secondary: 'var(--color-gradient-accent2)',
+    }),
     fontFamily: {
-      sans: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Segoe UI',
-        'Roboto, Oxygen',
-        'Ubuntu',
-        'Cantarell',
-        'Fira Sans',
-        'Droid Sans',
-        'Helvetica Neue',
-        'sans-serif',
-      ],
+      sans: ['Inter', ...fontFamily.sans],
+      mono: fontFamily.mono,
     },
     backgroundSize: {
       200: '150%',
