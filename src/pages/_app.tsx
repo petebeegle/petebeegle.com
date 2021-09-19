@@ -1,12 +1,15 @@
 import { SEO } from 'config';
 import { DefaultSeo } from 'next-seo';
+import { ThemeProvider } from 'next-theme';
 import { AppProps, NextWebVitalsMetric } from 'next/app';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
     <DefaultSeo {...SEO} />
-    <Component {...pageProps} />
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
   </>
 );
 
