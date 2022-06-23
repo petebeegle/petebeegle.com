@@ -7,7 +7,7 @@ const Footer = (): JSX.Element => (
         <p>made with</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
+          className="h-5 w-5 ml-2"
           viewBox="0 0 20 20"
           fill="#EF4444"
           aria-labelledby="heartTitle"
