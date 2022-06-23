@@ -26,6 +26,6 @@ jobs:
       - name: Download `.serverless` state from S3
         run: aws s3 sync s3://petebeegle-com/env/prod/.serverless .serverless --delete
       - name: Deploy
-        run: npx serverless
+        run: npx serverless@2.72.2
       - name: Upload `.serverless` state to S3
         run: aws s3 sync .serverless s3://petebeegle-com/env/prod/.serverless --delete
